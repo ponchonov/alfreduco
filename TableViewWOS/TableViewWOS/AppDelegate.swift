@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var window2: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -20,7 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.rootViewController = MainViewController()
         
+        window2 = UIWindow(frame: UIScreen.main.bounds)
+        window2? = UIWindow(frame: UIScreen.main.bounds)
+        window2?.rootViewController = SecondViewController()
+        
         window?.makeKeyAndVisible()
+        window2?.isHidden = true
         // Override point for customization after application launch.
         return true
     }
